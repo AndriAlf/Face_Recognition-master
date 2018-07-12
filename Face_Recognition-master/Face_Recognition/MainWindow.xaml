@@ -1,0 +1,23 @@
+﻿<Window x:Class="Face_Recognition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Closing="Window_Closing"
+        Title="Face Recognition Debug" Height="1080" Width="1920">
+    <Viewbox>
+        <Grid Width="1920" Height="1080">
+            <Image Name="camera" />
+            <Canvas Name="canvas">
+                <StatusBar>
+                    <StatusBarItem Content="{Binding StatusText}" />
+                </StatusBar>
+                <Ellipse Name="ellipseMataKiri" Style="{StaticResource EyeStyle}" />
+                <Ellipse Name="ellipseMataKanan" Style="{StaticResource EyeStyle}" />
+                <Ellipse Name="ellipseHidung" Style="{StaticResource NoseStyle}" />
+                <Ellipse Name="ellipseMulut" Style="{StaticResource MouthStyle}" />
+                <Rectangle Name="rectFaceFrame" Style="{StaticResource BoundingFaceStyle}" />
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>
+    
+
